@@ -35,10 +35,10 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
         /// </summary>
         /// <typeparam name="TRootViewModel">The type of the root view model.</typeparam>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public static void UseViewModelFactory<TRootViewModel>(
+        public static IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter> UseViewModelFactory<TRootViewModel>(
             this IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter> bootstrapper)
         {
-            bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TRootViewModel>());
+            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TRootViewModel>());            
         }
     }
 }
