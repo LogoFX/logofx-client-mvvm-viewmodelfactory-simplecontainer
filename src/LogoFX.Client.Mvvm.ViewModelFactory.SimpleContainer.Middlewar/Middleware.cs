@@ -1,4 +1,4 @@
-﻿using LogoFX.Client.Bootstrapping;
+﻿using LogoFX.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;
 using Solid.Practices.Middleware;
@@ -8,17 +8,17 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
     /// <summary>
     /// Middleware that registers view model factory implemented using LogoFX Simple Container.
     /// </summary>
-    /// <typeparam name="TRootViewModel">The type of the root view model.</typeparam>    
-    public class RegisterViewModelFactoryMiddleware<TRootViewModel> : 
-        IMiddleware<IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter>>        
+    /// <typeparam name="TRootObject">The type of the root object.</typeparam>    
+    public class RegisterViewModelFactoryMiddleware<TRootObject> : 
+        IMiddleware<IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter>>        
     {
         /// <summary>
         /// Applies the middleware on the specified object.
         /// </summary>
         /// <param name="object">The object.</param>
         /// <returns></returns>
-        public IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter> 
-            Apply(IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter> @object)
+        public IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> 
+            Apply(IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> @object)
         {
             @object.ContainerAdapter.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
             return @object;
@@ -33,12 +33,13 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
         /// <summary>
         /// Uses the view model factory which is based on LogoFX Simple Container.
         /// </summary>
-        /// <typeparam name="TRootViewModel">The type of the root view model.</typeparam>
+        /// <typeparam name="TRootObject">The type of the root object.</typeparam>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public static IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter> UseViewModelFactory<TRootViewModel>(
-            this IBootstrapperWithContainerAdapter<TRootViewModel, ExtendedSimpleContainerAdapter> bootstrapper)
+        public static IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> 
+            UseViewModelFactory<TRootObject>(
+            this IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> bootstrapper)
         {
-            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TRootViewModel>());            
+            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TRootObject>());            
         }
     }
 }
