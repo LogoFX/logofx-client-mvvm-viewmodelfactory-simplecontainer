@@ -4,7 +4,7 @@ using LogoFX.Practices.IoC;
 namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
 {
     /// <summary>
-    /// Represents <see cref="IViewModelFactory"/> implementation using <see cref="ExtendedSimpleContainer"/> IoC container
+    /// Represents <see cref="IViewModelFactory"/> implementation using <see cref="ExtendedSimpleContainer"/> ioc container.
     /// </summary>
     public class ViewModelFactory : IViewModelFactory
     {
