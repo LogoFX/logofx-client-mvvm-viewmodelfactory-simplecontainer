@@ -8,17 +8,16 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
     /// <summary>
     /// Middleware that registers view model factory implemented using LogoFX Simple Container.
     /// </summary>
-    /// <typeparam name="TRootObject">The type of the root object.</typeparam>    
-    public class RegisterViewModelFactoryMiddleware<TRootObject> : 
-        IMiddleware<IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter>>        
+    public class RegisterViewModelFactoryMiddleware : 
+        IMiddleware<IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter>>        
     {
         /// <summary>
         /// Applies the middleware on the specified object.
         /// </summary>
         /// <param name="object">The object.</param>
         /// <returns></returns>
-        public IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> 
-            Apply(IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> @object)
+        public IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter> 
+            Apply(IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter> @object)
         {
             @object.ContainerAdapter.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
             return @object;
@@ -32,14 +31,13 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
     {
         /// <summary>
         /// Uses the view model factory which is based on LogoFX Simple Container.
-        /// </summary>
-        /// <typeparam name="TRootObject">The type of the root object.</typeparam>
+        /// </summary>        
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public static IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> 
-            UseViewModelFactory<TRootObject>(
-            this IBootstrapperWithContainerAdapter<TRootObject, ExtendedSimpleContainerAdapter> bootstrapper)
+        public static IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter> 
+            UseViewModelFactory(
+            this IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter> bootstrapper)
         {
-            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TRootObject>());            
+            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware());            
         }
     }
 }
