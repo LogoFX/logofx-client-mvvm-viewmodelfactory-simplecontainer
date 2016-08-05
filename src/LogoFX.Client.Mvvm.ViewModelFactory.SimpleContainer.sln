@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests", "LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests.csproj", "{35EECDC6-B183-4116-AE92-CD7A74F8A792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Extensions", "LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Extensions\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Extensions.csproj", "{38AF888A-64BB-4379-A5DB-37F6350BBA2C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{35EECDC6-B183-4116-AE92-CD7A74F8A792}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35EECDC6-B183-4116-AE92-CD7A74F8A792}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35EECDC6-B183-4116-AE92-CD7A74F8A792}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38AF888A-64BB-4379-A5DB-37F6350BBA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38AF888A-64BB-4379-A5DB-37F6350BBA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38AF888A-64BB-4379-A5DB-37F6350BBA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38AF888A-64BB-4379-A5DB-37F6350BBA2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

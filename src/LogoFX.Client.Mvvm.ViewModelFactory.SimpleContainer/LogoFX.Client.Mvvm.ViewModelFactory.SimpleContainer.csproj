@@ -33,6 +33,7 @@
     <DocumentationFile>..\Bin\Release\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelFactory.cs" />
   </ItemGroup>
