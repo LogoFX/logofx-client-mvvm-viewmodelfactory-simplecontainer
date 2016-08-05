@@ -50,6 +50,10 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.1.0.5\lib\net45\LogoFX.Client.Mvvm.ViewModel.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.1.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch\LogoFX.Core.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +68,14 @@
     </Reference>
     <Reference Include="nunit.framework, Version=3.2.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.2.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Solid.Bootstrapping, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Bootstrapping.1.1.1\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Bootstrapping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Solid.Extensibility, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Extensibility.1.1.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
