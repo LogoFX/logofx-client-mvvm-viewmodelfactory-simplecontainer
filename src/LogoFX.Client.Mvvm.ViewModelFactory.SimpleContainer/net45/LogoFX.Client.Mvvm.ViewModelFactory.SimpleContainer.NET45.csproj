@@ -7,8 +7,8 @@
     <ProjectGuid>{B0FA75AC-6868-45BF-AFA5-599E6F3FB179}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.NET45</RootNamespace>
-    <AssemblyName>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.NET45</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</RootNamespace>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Bin\net45\Release\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.NET45.xml</DocumentationFile>
+    <DocumentationFile>..\..\Bin\net45\Release\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LogoFX.Client.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
