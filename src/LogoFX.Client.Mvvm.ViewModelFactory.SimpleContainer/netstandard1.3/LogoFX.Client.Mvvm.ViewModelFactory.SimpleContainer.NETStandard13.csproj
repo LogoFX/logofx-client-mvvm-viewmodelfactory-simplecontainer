@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</RootNamespace>
+    <AssemblyVersion>1.2.0</AssemblyVersion>
+    <FileVersion>1.2.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Bin\netstandard1.3\Release</OutputPath>
+    <DocumentationFile>..\..\Bin\netstandard1.3\Release\netstandard1.3\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\Extensions.cs" Link="Extensions.cs" />
+    <Compile Include="..\src\ViewModelFactory.cs" Link="ViewModelFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.0-rc2" />
+    <PackageReference Include="LogoFX.Practices.IoC" Version="1.1.0-rc1" />
+  </ItemGroup>
+
+</Project>

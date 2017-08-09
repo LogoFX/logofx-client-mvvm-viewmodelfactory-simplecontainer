@@ -14,7 +14,7 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
         /// <param name="bootstrapper">The bootstrapper.</param>
         public static TBootstrapper UseViewModelFactory<TBootstrapper>(
             this TBootstrapper bootstrapper)
-            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveContainerRegistrator
+            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveRegistrator
         {
             return bootstrapper.UseViewModelFactory<TBootstrapper, ViewModelFactory>();
         }
