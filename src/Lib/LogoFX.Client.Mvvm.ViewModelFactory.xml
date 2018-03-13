@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogoFX.Client.Mvvm.ViewModelFactory</name>
+    </assembly>
+    <members>
+        <member name="T:LogoFX.Client.Mvvm.ViewModelFactory.IViewModelFactory">
+            <summary>
+            Represents view model factory. Used when the requested view model cannot be injected
+            due to presence of run-time parameters.    
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.ViewModelFactory.IViewModelFactory.CreateModelWrapper``2(``0)">
+            <summary>
+            Creates the view model which has capabilities of a model wrapper.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.ViewModelFactory.BootstrapperExtensions">
+            <summary>
+            The bootstrapper extension methods.
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.ViewModelFactory.BootstrapperExtensions.UseViewModelFactory``2(``0)">
+            <summary>
+            Uses the view model factory.
+            </summary>        
+            <param name="bootstrapper">The bootstrapper.</param>
+            <typeparam name="TBootstrapper">The type of the bootstrapper.</typeparam>
+            <typeparam name="TViewModelFactory">The type of the view model factory.</typeparam>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.ViewModelFactory.RegisterViewModelFactoryMiddleware`2">
+            <summary>
+            Middleware that registers view model factory.
+            </summary>    
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.ViewModelFactory.RegisterViewModelFactoryMiddleware`2.Apply(`0)">
+            <summary>
+            Applies the middleware on the specified object.
+            </summary>
+            <param name="object">The object.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
