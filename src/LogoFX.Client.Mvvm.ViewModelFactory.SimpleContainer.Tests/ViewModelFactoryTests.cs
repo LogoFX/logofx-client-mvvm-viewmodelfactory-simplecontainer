@@ -1,13 +1,13 @@
-﻿using LogoFX.Client.Mvvm.ViewModel;
+﻿using FluentAssertions;
+using LogoFX.Client.Mvvm.ViewModel;
 using LogoFX.Practices.IoC;
-using NUnit.Framework;
+using Xunit;
 
 namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests
-{
-    [TestFixture]
-    class ViewModelFactoryTests
+{    
+    public class ViewModelFactoryTests
     {
-        [Test]
+        [Fact]
         public void
             GivenDependencyHasOneParameterNamedModelAndDependencyIsRegisteredPerRequest_WhenModelWrapperIsCreated_ThenModelWrapperIsNotNull
             ()
@@ -19,7 +19,7 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests
             var viewModelFactory = new ViewModelFactory(container);
             var modelWrapper = viewModelFactory.CreateModelWrapper<string, ObjectViewModel<string>>(model);
 
-            Assert.AreEqual(model, modelWrapper.Model);
+            modelWrapper.Model.Should().Be(model);            
         }
     }
 }
