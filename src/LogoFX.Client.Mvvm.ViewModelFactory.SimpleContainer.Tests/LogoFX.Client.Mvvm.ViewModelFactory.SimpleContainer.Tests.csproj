@@ -1,77 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75D2F5A7-AD38-4C27-B32A-CF0C22C70954}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests</RootNamespace>
-    <AssemblyName>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModelFactoryTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="FluentAssertions">
-      <Version>5.4.2</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core">
-      <Version>1.1.1-rc4</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory">
-      <Version>1.2.1-rc2</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Practices.IoC">
-      <Version>1.1.1-rc3</Version>
-    </PackageReference>
-    <PackageReference Include="Solid.Bootstrapping">
-      <Version>1.2.1-rc5</Version>
-    </PackageReference>
-    <PackageReference Include="Solid.Extensibility">
-      <Version>1.2.1-rc4</Version>
-    </PackageReference>
-    <PackageReference Include="xunit.core">
-      <Version>2.4.1</Version>
+    <PackageReference Include="FluentAssertions" Version="5.4.2" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="1.1.1-rc4" />
+    <PackageReference Include="LogoFX.Practices.IoC" Version="1.1.1-rc3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit.core" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.csproj">
-      <Project>{2828c3c1-cd6d-4fb0-bfbf-bd2175089ece}</Project>
-      <Name>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
