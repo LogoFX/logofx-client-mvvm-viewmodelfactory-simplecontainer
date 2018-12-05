@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</AssemblyName>
     <RootNamespace>LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer</RootNamespace>
-    <Version>1.2.1</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -17,8 +17,8 @@
   </PropertyGroup> 
 
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc2" />
-    <PackageReference Include="LogoFX.Practices.IoC" Version="1.1.1-rc3" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="2.0.0-rc1" />
+    <PackageReference Include="LogoFX.Practices.IoC" Version="2.0.0-rc1" />
   </ItemGroup>
 
 </Project>
