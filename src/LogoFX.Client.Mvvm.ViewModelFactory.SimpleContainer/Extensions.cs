@@ -9,7 +9,7 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer
     public static class BootstrapperExtensions
     {
         /// <summary>
-        /// Uses the view model factory which is based on LogoFX Simple Container.
+        /// Uses the view model factory which is based on <see cref="LogoFX.Practices.IoC.SimpleContainer"/>.
         /// </summary>        
         /// <param name="bootstrapper">The bootstrapper.</param>
         public static TBootstrapper UseViewModelFactory<TBootstrapper>(
