@@ -7,7 +7,8 @@ before_build:
 - nuget restore
 
 after_test:
-  - cd ./devops
+  - cd
+  - cd devops
   - cd pack
   - pack
 
