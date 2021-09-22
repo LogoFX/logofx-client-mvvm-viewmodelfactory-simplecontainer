@@ -8,3 +8,5 @@ View model factory implementation for LogoFX Extended Simple Container.
 <img src=https://img.shields.io/nuget/dt/LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer>
 
 [Get package](https://www.nuget.org/packages/LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer)
+
+This repository is archived. Its functionality has been moved to https://github.com/LogoFX/mvvm
